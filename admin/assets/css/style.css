@@ -1,0 +1,292 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    position: relative;
+    padding-bottom: 300px;
+    min-height: 100vh;
+}
+.container{
+    text-align: left;
+}
+
+.container img{
+    padding-left: 50px;
+}
+
+header{
+    text-align: center;
+    background:rgba(183, 171, 254, 1);
+    height: 100px;
+    color:black;
+    padding:5px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+}
+
+.items {
+    width: 40%;
+    display:;
+    justify-content: space-between;
+    
+}
+
+.item {
+    float: right;
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+}
+
+.menu {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
+.items ul{
+    margin: 0px;
+    padding: 10px;
+    background: none;
+    display: block;
+    float: right;
+}
+
+.items ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+.items ul li a{
+    font-size: 0.9em;
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: black;
+}
+
+.items ul li a:hover {
+    display: block;
+    color: blue;
+    background-color:rgba(183, 171, 254, 1);
+    box-shadow: inset 0px 0px 5px blue;
+}
+
+.items ul li .drop{
+    display: none;
+
+}
+
+.items ul li:hover .drop{
+    display: block;
+    background-color: rgba(183, 171, 254, 1);
+    position: absolute;
+    padding: 10px;
+}
+
+.items ul li:hover .drop li{
+    display: block;
+}
+
+.items ul li:hover .drop li a {
+    padding:10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.items ul li:hover .drop li a:hover {
+    background:white;
+    box-shadow: inset 0px 0px 5px white;
+}
+
+.menu.active{
+    font-weight: 600;
+    border-bottom: 3px solid black;
+}
+
+main {
+    width: 90vw;
+    margin: 0 auto;
+    padding: 30px 20px;
+    /*min-height: calc(100vh - 211px - 180px);*/
+}
+
+.gambar-body img{
+    padding-top: 50px;
+    padding-left: 120px;
+}
+
+
+.text{
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1.title{
+    font-size: 24px;
+    color: black;
+}
+
+.gambar{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin:auto;
+}
+
+.gambar .foto img{
+    width: 250px;
+}
+
+.foto{
+    border: 1px solid black;
+    margin: 10px;
+    text-align: center;
+}
+
+.foto a{
+    border:1px solid green;
+    padding: 0px;
+    color: aliceblue;
+    background:green;
+    text-decoration:none ;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+footer{
+    background-color: rgba(183, 171, 254, 1);
+    color: white;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-left{
+    color: black;
+    float: left;
+}
+.footer-center{
+    color: black;
+    float: center;
+    padding-left: 600px;
+}
+
+.payment{
+    color: black;
+    float:center;
+    padding-top: 0px;
+}
+
+.footer-bottom{
+    text-align: center;
+    color: black;
+    padding-bottom: 0;
+}
+
+/* Hamburger Menu */
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input{
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left:-5px;
+    top:-3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color:black;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* Hamburger Menu Animation */
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0 ;
+}
+
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100% ;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    background-color:black;
+    transform: rotate(45deg) translate(-1px,-1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4){
+    background-color:black;
+    transform: rotate(45deg) translate(-1px,0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3){
+    opacity: 0;
+    transform: scale(0);
+}
+
+.col-md-4{
+  width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin:auto;
+}
+
+.foto img{
+    width: 250px;
+}
+
+.caption {
+    float: center;
+}
+
+.caption a{
+    border:1px solid green;
+    padding: 0px;
+    color: aliceblue;
+    background:green;
+    text-decoration:none ;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.mandiri img{
+    padding-left: 20px;
+    padding-top: 10px;
+    display: center;
+}
+
+.payment h5{
+    text-align: center;
+    font-size: 24px;
+}
+
+.order h6{
+    text-align: center;
+    font-size: 24px;
+    padding-bottom: 100px;
+}
